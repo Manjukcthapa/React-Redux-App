@@ -1,8 +1,8 @@
-import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE } from "../actions";
+import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE } from "../action";
 
 export const initialState = {
-  photo: [""],
-  isLoading: false,
+  photo: {},
+  isFetching: false,
   error: ""
 };
 
@@ -19,7 +19,7 @@ export const reducer = (state = initialState, action) => {
         ...state,
         isFetching: false,
         error: "",
-        catFacts: action.payload
+        photo: action.payload
       };
     case FETCH_FAILURE:
       return {
