@@ -1,7 +1,9 @@
 import { START_FETCHING} from '../actions';
 
 export const initialState = {
-    Photo:[]
+    photo: [""],
+  isLoading: false,
+  error: ""
 };
 
 export const reducer = (state = initialState, action) => {
